@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Set body background to white */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .separator {
+            border-bottom: 5px solid #000; /* Increased thickness and changed color of separation lines */
+            margin-bottom: 20px;
+        }
+        .logo {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center; /* Center the catalog items */
+            flex-wrap: wrap;
+            padding: 0 20px; /* Adjusted padding */
+            background-color: #fff; /* Set background to white */
+        }
+        .list-container {
+            flex-basis: calc(33.33% - 40px);
+            padding: 20px;
+            border-bottom: 5px solid #000; /* Increased thickness and changed color of border */
+            margin-bottom: 20px;
+            text-align: center; /* Center the content */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #333; /* Black text color */
+            transition: color 0.3s ease; /* Added transition for smoother color change */
+        }
+        a:hover {
+            color: #ff0000; /* Red text color on hover */
+        }
+        #search {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: auto;
+            box-sizing: border-box;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="Summit-logo.png" alt="Logo">
+        <h1>Red Hat Application Services</h1>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search catalog...">
+    </div>
+
+    <div class="separator"></div>
+    
+    <div class="container">
+        <div id="integration" class="list-container">
+            <h2>Integration and Data Streaming</h2>
+            <ul>
+                <li><a href="integration1.html" target="_blank">Integration 1 [demo]</a></li>
+                <li><a href="integration2.html" target="_blank">Integration 2 [slides]</a></li>
+                <li><a href="integration3.html" target="_blank">Integration 3 [video]</a></li>
+            </ul>
+        </div>
+
+        <div id="api-management" class="list-container">
+            <h2>API Management</h2>
+            <ul>
+                <li><a href="api-management1.html" target="_blank">API Management 1 [demo]</a></li>
+                <li><a href="api-management2.html" target="_blank">API Management 2 [slides]</a></li>
+                <li><a href="api-management3.html" target="_blank">API Management 3 [video]</a></li>
+            </ul>
+        </div>
+
+        <div id="runtimes-frameworks" class="list-container">
+            <h2>Runtimes and Frameworks</h2>
+            <ul>
+                <li><a href="runtimes-frameworks1.html" target="_blank">Runtimes and Frameworks 1 [demo]</a></li>
+                <li><a href="runtimes-frameworks2.html" target="_blank">Runtimes and Frameworks 2 [slides]</a></li>
+                <li><a href="runtimes-frameworks3.html" target="_blank">Runtimes and Frameworks 3 [video]</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search');
+        const listContainers = document.querySelectorAll('.list-container');
+
+        searchInput.addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+
+            listContainers.forEach(container => {
+                const links = container.querySelectorAll('a');
+                let found = false;
+
+                links.forEach(link => {
+                    const linkText = link.textContent.toLowerCase();
+                    if (linkText.includes(searchTerm)) {
+                        link.parentElement.style.display = 'block';
+                        found = true;
+                    } else {
+                        link.parentElement.style.display = 'none';
+                    }
+                });
+
+                if (found) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
