@@ -64,7 +64,7 @@
             transition: color 0.3s ease; /* Added transition for smoother color change */
         }
         a:hover {
-            color: #ff0000; /* Red text color on hover */
+            color: blue; /* Red text color on hover */
         }
         #search {
             margin-bottom: 20px;
@@ -76,8 +76,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 2px;
         }
+    
     </style>
 </head>
 <body>
@@ -91,36 +92,55 @@
         <input type="text" id="search" placeholder="Search catalog...">
     </div>
 
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="https://drive.google.com/file/d/1ZULau0hLfhNTmc2rZY21jk_GR_aKNF-H/view?usp=drive_link" target="_blank">
+            <strong style="color: blue;">🎬 Idle Monitor Playlist</strong>
+        </a>
+    </div>
+
+
+
     <div class="separator"></div>
-    
+
     <div class="container">
         <div id="integration" class="list-container">
             <h2>Integration and Data Streaming</h2>
             <ul>
-                <li><a href="integration1.html" target="_blank">Integration 1 [demo]</a></li>
-                <li><a href="integration2.html" target="_blank">Integration 2 [slides]</a></li>
-                <li><a href="integration3.html" target="_blank">Integration 3 [video]</a></li>
+                <li><a href="https://docs.google.com/document/d/1r6i1b8m8ABchZ1VMp357nUgekQNcp4iXLyNYW51Aw3M/edit#bookmark=id.e0aja2mpc4l1" target="_blank">Event streaming and real time data processing with AMQ Streams (Kafka) [<span style="color: green; font-weight: bold;">demo</span>]</a></li>
+                <li><a href="https://docs.google.com/document/d/1r6i1b8m8ABchZ1VMp357nUgekQNcp4iXLyNYW51Aw3M/edit#bookmark=id.17s9alfaw52i" target="_blank">Change data capture and integration with Debezium and Camel [<span style="color: green; font-weight: bold;">demo</span>]</a></li>
+                <li><a href="https://docs.google.com/document/d/1r6i1b8m8ABchZ1VMp357nUgekQNcp4iXLyNYW51Aw3M/edit#bookmark=id.kuh03bsobu9t" target="_blank">Event driven architecture with Serverless Eventing (AMQ Streams, Serverless, Knative) [<span style="color: green; font-weight: bold;">demo</span>]</a></li>
+                <li><a href="https://drive.google.com/file/d/11A6MH-FftvGCexPqKIL79XiV2lARQn0t/view" target="_blank">Kaoto Visual Design for Apache Camel [<span style="color: green; font-weight: bold;">demo</span>]</a></li>
+
             </ul>
         </div>
 
         <div id="api-management" class="list-container">
-            <h2>API Management</h2>
+            <h2>API Management and Connectivity</h2>
             <ul>
-                <li><a href="api-management1.html" target="_blank">API Management 1 [demo]</a></li>
-                <li><a href="api-management2.html" target="_blank">API Management 2 [slides]</a></li>
+                <li><a href="https://docs.google.com/document/d/1r6i1b8m8ABchZ1VMp357nUgekQNcp4iXLyNYW51Aw3M/edit#bookmark=id.b9lo16h414o9" target="_blank">Secure communication between disparate services with Red Hat Service Interconnect [<span style="color: green; font-weight: bold;">demo</span>]</a></li>
+                <li><a href="https://docs.google.com/document/d/1r6i1b8m8ABchZ1VMp357nUgekQNcp4iXLyNYW51Aw3M/edit#bookmark=id.mcph8675lm5c" target="_blank">Secure and Manage APIs with 3scale API management and Keycloak [<span style="color: green; font-weight: bold;">demo</span>]</a></li>
                 <li><a href="api-management3.html" target="_blank">API Management 3 [video]</a></li>
             </ul>
-        </div>
+        </div>       
 
         <div id="runtimes-frameworks" class="list-container">
             <h2>Runtimes and Frameworks</h2>
             <ul>
-                <li><a href="runtimes-frameworks1.html" target="_blank">Runtimes and Frameworks 1 [demo]</a></li>
-                <li><a href="runtimes-frameworks2.html" target="_blank">Runtimes and Frameworks 2 [slides]</a></li>
-                <li><a href="runtimes-frameworks3.html" target="_blank">Runtimes and Frameworks 3 [video]</a></li>
+                <li><a href="https://drive.google.com/file/d/1VulqlWXlOajUyWrfm8GJ1MjQOkoz8nEM/view" target="_blank">Replatforming JBoss EAP 8 to OpenShift [<span style="color: green; font-weight: bold;">demo</span>]</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLoQ0Ba0OL3iuwy2Bw3AkJbErcVOyufMF4" target="_blank">Developer Productivity with Quarkus [<span style="color: red; font-weight: bold;">video</span>]</a></li>
+                <li><a href="https://drive.google.com/file/d/1P600hWUZrRi4yFd9Zw1is5Yk_NUnNEtE/view" target="_blank">Automating migration from JBoss EAP 7 to JBoss EAP 8 [<span style="color: green; font-weight: bold;">demo</span>]</a></li>
             </ul>
         </div>
     </div>
+
+        <div id="rhaf" class="list-container">
+            <h2>Red Hat Application Foundations</h2>
+            <ul>
+                <li><a href="https://docs.google.com/presentation/d/14vbEh5fuDFlDDGDObm9lXBQyIzY-sJRU_Nf_144MQ0w/edit#slide=id.g6b8a41c33d_0_0" target="_blank">RHAF Technical Overview [<span style="color: violet; font-weight: bold;">slides</span>]</a></li>
+                <li><a href="https://drive.google.com/file/d/1ZULau0hLfhNTmc2rZY21jk_GR_aKNF-H/view?usp=drive_link" target="_blank">RHAF Overview demo [<span style="color: red; font-weight: bold;">video</span>]</a></li>
+                <li><a href="rhaf-3.html" target="_blank">RHAF 3 [video]</a></li>
+            </ul>
+        </div> 
 
     <script>
         const searchInput = document.getElementById('search');
